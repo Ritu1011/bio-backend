@@ -2,12 +2,13 @@ const mongoose=require("mongoose")
 
 const schoolSchema= new mongoose.Schema(
     {
-    id: {type:Number, required:true},
+    _id: {type:Number, required:true},
     school:{type: String, required:true}
      },
     {
       versionKey: false,
       timestamps: true, 
+      _id : false 
     }
   );
 

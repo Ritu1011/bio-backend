@@ -9,6 +9,7 @@ const majorController=require("./controllers/Major")
 const occupationController=require("./controllers/Occuption")
 const religionController=require("./controllers/Religion")
 const reasonController=require("./controllers/Reason")
+const nameController=require("./controllers/Name")
 app.use(express.json()) 
 
 
@@ -19,4 +20,5 @@ app.use("/major",majorController)
 app.use("/occupation",occupationController)
 app.use("/religion",religionController)
 app.use("/reason",reasonController)
+app.use("/name",nameController)
 module.exports=app 
