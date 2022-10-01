@@ -21,6 +21,15 @@ router.get("", async (req, res) => {
       return res.status(500).send({ message: err.message });
     }
   });
+  router.get("/:id", async (req, res) => {
+    try {
+      const location = await Location.findById(req.params.id).lean().exec();
+   
   
+      return res.status(200).send(location);
+    } catch (err) {
+      return res.status(500).send({ message: err.message });
+    }
+  });
 
 module.exports=router
